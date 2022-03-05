@@ -1,0 +1,21 @@
+<h1>
+    Department Delete <i class="fa fa-trash-o" aria-hidden="true"></i>
+  </h1>
+  <table class="table table-bordered">
+      <tbody>
+      <tr>
+        <td><label>ID: </label>{{departmentToDelete.id}}</td>
+        <td><label>Name: </label>{{departmentToDelete.name}}</td>
+        <td><label>Location: </label>{{departmentToDelete.Location}}</td>
+      </tr>
+      <tr>
+        <td colspan="3"><button class="btn btn-danger" (click)="deleteDepartment()">
+            Delete <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </button></td>
+          
+      </tr>
+      </tbody>
+    
+    </table>
+    
+  

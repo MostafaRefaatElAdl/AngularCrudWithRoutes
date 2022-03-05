@@ -1,0 +1,30 @@
+<h1>Add Department</h1>
+<form class="row g-3 needs-validation" #add="ngForm" >
+
+
+  <table class="table table-borderless">
+    <tbody>
+      <tr>
+        <td>
+          <label>ID</label><input class="form-control" id="id" name="id" type="number" [(ngModel)]="newDepartment.id" #id="ngModel" placeholder="Department ID" required><br>
+          <span *ngIf="id.invalid && id.touched" class="text-danger">Please enter an ID</span>
+        </td>
+        <td>
+          <label>Name</label><input class="form-control" id="name" name="name" type="text" [(ngModel)]="newDepartment.name" #name="ngModel" placeholder="Department Name" required><br>
+          <span *ngIf="name.invalid && name.touched" class="text-danger">Please enter a Name</span>
+        </td>
+        <td>
+          <label>Location</label><input class="form-control" id="location" name="location" type="text" [(ngModel)]="newDepartment.location" #location="ngModel" placeholder="Department location" required><br>
+          <span *ngIf="location.invalid && location.touched" class="text-danger">Please enter a location</span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3"><button class="btn btn-success" type="submit" (click)="addDepartment()" [disabled]="add.invalid" >
+            ADD <i class="fa fa-plus-square" aria-hidden="true"></i>
+          </button></td>
+
+      </tr>
+    </tbody>
+
+  </table>
+</form>

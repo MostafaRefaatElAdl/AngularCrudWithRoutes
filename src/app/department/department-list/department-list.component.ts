@@ -14,9 +14,12 @@ export class DepartmentListComponent implements OnInit {
   constructor(private stdSer: DepartmentService,private router:Router) { }
 
   ngOnInit(): void {
+    
     this.stdSer.getAllDepartments().subscribe({
       next: a => { this.departments = a; }
     })
+    console.log( this.deptSelected.Name);
+    // console.log( this.departments[0].Name);
   }
 
   // //^function to delete data

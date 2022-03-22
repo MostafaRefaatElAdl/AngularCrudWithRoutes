@@ -1,5 +1,7 @@
 export class Department {
-    constructor(public id:number, public name:string,public location:string){}
+    constructor(public id:number, public name:string,public location:string){
+        
+    }
 
     get Id(){
         return this.id;
@@ -9,8 +11,8 @@ export class Department {
         this.id=Id;
     }
 
-    get Name(){
-        return this.name;
+    public get Name():string {
+        return this.name + "ay kalam";
     }
 
     set Name(Name:string){
